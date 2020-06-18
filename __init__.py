@@ -76,6 +76,9 @@ def decrypt_block(c, d, n):
 def decrypt_string(s, d, n):
     return ''.join([chr(decrypt_block(ord(x), d, n)) for x in list(s)])
 
+def getApp():
+    return app
+
 # Run Server
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
